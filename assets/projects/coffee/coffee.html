@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coffee</title>
+    <style>
+      @font-face {
+        font-family: poppins;
+        src: url(Poppins-Regular.ttf);
+      }
+      body {
+        margin: 0;
+        font-family: poppins;
+      }
+      .coffee-hero {
+        background-image: url(coffee_hero_img.jpg);
+        background-size: cover;
+        height: 100vh;
+      }
+      .coffee-hero-section {
+        height: 100%;
+      }
+
+      .coffee-nav-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 2px;
+      }
+      .coffee-nav-search {
+        display: inline-flex;
+        height: 110px;
+        cursor: pointer;
+      }
+
+      .coffee-nav-menu {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .coffee-hero-btn {
+        display: flex;
+        border: 1px solid;
+        height: 50px;
+        width: 170px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 50px;
+        background: white;
+        cursor: pointer;
+      }
+      .coffee-hero-section {
+        height: 100%;
+        max-width: 1440px;
+        width: 90%;
+        margin: auto;
+      }
+      .coffee-hero-discription h1,
+      h2 {
+        color: white;
+      }
+      .coffee-hero-discription {
+        padding-left: 10%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .coffee-hero-discription h1,
+      h2 {
+        text-shadow: 7px 14px 4px #000;
+      }
+      .coffee-nav-logo {
+        cursor: pointer;
+      }
+      .coffee-nav-menu-item {
+        cursor: pointer;
+      }
+      .img-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        padding: 17px 0px;
+        background-color: antiquewhite;
+      }
+      .cofee-icons img {
+        width: 100px;
+      }
+      .cofee-one {
+        cursor: pointer;
+      }
+      .our-specialdesert h1 {
+        text-align: center;
+        padding: 42px;
+      }
+      .our-speciadesert-cardcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 50px;
+        padding: 27px;
+      }
+      .desert-carditeam {
+        background-color: #faebd78f;
+      }
+      .desert-carditeam img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .special-cardcontainer {
+        gap: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 27px;
+      }
+
+      .special-carditeam {
+        background-color: #faebd78f;
+      }
+      .special-carditeam img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .specialbtnwrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+      }
+      .special-btn {
+        background: black;
+        color: white;
+        width: 94px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .special-cofee h1 {
+        text-align: center;
+        padding: 42px;
+      }
+      .betans-section h2 {
+        color: black;
+        font-size: 60px;
+      }
+      .betans-dis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5em;
+        margin: 0;
+        -webkit-text-stroke: 1px #ffffff;
+      }
+      .betans-btn {
+        border: 1px solid;
+        height: 60px;
+        width: 315px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+      }
+      .betans-section {
+        background-image: url(hero\ 2.jpg);
+        background-size: cover;
+        margin-top: 80px;
+      }
+      .reviews h4 {
+    font-family: satisfy;
+}
+.review-one {
+    text-align: center;
+}
+.reviews-cardcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    font-family: 'regular';
+    padding: 27px;
+    align-items: baseline;
+}
+.review-carditeam {
+    display: grid;
+    gap: 20px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+.card-img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.review-carditeam img {
+    width: 50px;
+    border-radius: 20px;
+}
+.review-one h1 {
+    font-family: 'regular';
+}
+.join-head h2 {
+        color: black;
+        font-size: 50px;
+      }
+      .join-head-dis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .join-dis {
+        font-size: 25px;
+      }
+      .join-btn {
+        display: flex;
+        justify-content: center;
+      }
+      .join-btn1 {
+        border: 1px solid;
+        height: 35px;
+        width: 385px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        cursor: pointer;
+      }
+      .join-btn2 {
+        border: 1px solid;
+        border-radius: 50px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      .join-section {
+        background-color: #b8b8b8;
+        margin-top: 80px;
+        padding-bottom: 20px;
+      }
+      .social-img img {
+        width: 30px;
+        
+      }
+      .end-section {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+      }
+      @media (max-width: 768px){
+        .coffee-nav-menu {
+            display: none;
+        }
+        .special-cardcontainer{
+            grid-template-columns: 1fr 1fr;
+        }
+        .our-speciadesert-cardcontainer{
+            grid-template-columns: 1fr 1fr;
+        }
+        .reviews-cardcontainer{
+            grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 500px){
+        .cofee-one img {
+            width: 60px;
+        }
+        .special-cardcontainer {
+            grid-template-columns: 1fr;
+        }
+        .our-speciadesert-cardcontainer {
+            grid-template-columns: 1fr;
+        }
+        .betans-dis h2 {
+            font-size: 38px;
+        }
+        .join-head h2 {
+            font-size: 30px;
+        }
+        .end-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+      } 
+    </style>
+  </head>
+  <body>
+    <div class="coffee-hero">
+      <div class="coffee-nav-section">
+        <div class="coffee-nav-logo">
+          <span>COFFEE</span>
+        </div>
+        <div class="coffee-nav-menu">
+          <div class="coffee-nav-menu-item">HOME</div>
+          <div class="coffee-nav-menu-item">COFFEE</div>
+          <div class="coffee-nav-menu-item">BAKERY</div>
+          <div class="coffee-nav-menu-item">SHOP</div>
+          <div class="coffee-nav-menu-item">ABOUT</div>
+          <div class="coffee-nav-menu-item">LOGIN</div>
+        </div>
+        <div class="coffee-nav-search">
+          <img src="search_icon.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="coffee-hero-section">
+        <div class="coffee-hero-discription">
+          <h2>Welcome!</h2>
+          <h1>We serve the richest coffee</h1>
+          <h1>in the city!</h1>
+          <div class="coffee-hero-btn">Coffee</div>
+        </div>
+      </div>
+    </div>
+    <div class="cofee-icons">
+      <div class="img-wrapper">
+        <div class="cofee-one">
+          <img src="cup-of-hot-chocolate.png" alt="" />
+          <p>Hot cofee</p>
+        </div>
+
+        <div class="cofee-one">
+          <img src="iced-coffee.png" alt="" />
+          <p>Cold cofee</p>
+        </div>
+
+        <div class="cofee-one">
+          <img src="coffee-cup.png" alt="" />
+          <p>Cup cofee</p>
+        </div>
+
+        <div class="cofee-one">
+          <img src="cake.png" alt="" />
+          <p>Dessert</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="new-cofees">
+      <div class="special-cofee">
+        <h1>OUR SPECIAL COFEE</h1>
+        <div class="special-cardcontainer">
+          <div class="special-carditeam">
+            <img src="pexels-viniciusvieirafotografia-22608832.jpg" alt="" />
+            <div class="dicrip-sec">
+              <p><b>Lungo cofee</b></p>
+              <p>bdg</p>
+              <p>RS.250</p>
+            </div>
+
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="special-carditeam">
+            <img src="pexels-valeriya-7474152.jpg" alt="" />
+            <p><b>Dolgna cofee</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="special-carditeam">
+            <img src="pexels-tolgaaslanturk-11256666.jpg" alt="" />
+            <p><b>Iced cofee</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="special-carditeam">
+            <img src="pexels-ekrulila-2615323 (1).jpg" alt="" />
+            <p><b>Fitter cofee</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="our-specialdesert">
+        <h1>OUR SPECIAL DESERT</h1>
+
+        <div class="our-speciadesert-cardcontainer">
+          <div class="desert-carditeam">
+            <img src="pexels-marta-dzedyshko-1042863-2067396.jpg" alt="" />
+            <p><b>Gulab Jamun</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="desert-carditeam">
+            <img src="pexels-pixabay-372886.jpg" alt="" />
+            <p><b>Chocolate Tiramisu</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="desert-carditeam">
+            <img src="pexels-marta-dzedyshko-1042863-2067428.jpg" alt="" />
+            <p><b>Churros</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="desert-carditeam">
+            <img src="pexels-helloaesthe-17215880.jpg" alt="" />
+            <p><b>Australian Lamingtons</b></p>
+            <p>bdg</p>
+            <p>RS.250</p>
+            <div class="specialbtnwrapper">
+              <div class="special-btn">
+                <span>add to cart</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="betans-section">
+      <div class="betans-dis">
+        <h2><b>Check out our best</b></h2>
+        <h2><b>coffee betans</b></h2>
+        <div class="betans-btn">Packages of product>></div>
+      </div>
+    </div>
+    <div class="reviews">
+        <div class="review-one">
+             <h4>come and join</h4>
+        <h1>OUR HAPPY CUSTOMERS</h1>
+        </div>
+       
+    
+    <div class="reviews-cardcontainer">
+        
+    
+        <div class="review-carditeam">
+            <div class="card-img">
+                  <img src="Elon_Musk_Colorado_2022_(cropped2).jpg" alt="">
+                  <p><b>Elon Reeve Musk</b></p>
+            </div>
+            <p>
+                Elon Reeve Musk (/ˈiːlɒn/; born June 28, 1971)
+                 is a businessman and investor known for his key roles 
+                 in space company SpaceX and automotive company Tesla,
+                  Inc. Other involvements include ownership of X Corp.,
+                 formerly Twitter, and his role in the founding of The Boring Company, 
+                 xAI, Neuralink and OpenAI. He is one of the wealthiest people in the world;
+                  as of June 2024, Forbes estimates his net worth to be US$210 billion.[4]
+    
+            </p>
+    
+          
+        </div>
+    
+        <div class="review-carditeam">
+            <div class="card-img">
+                  <img src="Mark_Zuckerberg_F8_2019_Keynote_(32830578717)_(cropped).jpg" alt="">
+                  <p>Mark Elliot Zuckerberg</p>
+            </div>
+            <p>
+                Mark Elliot Zuckerberg (/ˈzʌkərbɜːrɡ/; born May 14, 1984)
+                 is an American businessman.
+                He co-founded the social media service Facebook,
+                along with his Harvard roommates in 2004, 
+                and its parent company Meta Platforms (formerly Facebook, Inc.),
+                of which he is chairman, chief executive officer and controlling shareholder.
+    
+                  Zuckerberg briefly attended Harvard University, 
+                 where he launched Facebook in February 2004 
+                 with his roommates Eduardo Saverin, Andrew McCollum,
+                 Dustin Moskovitz and Chris Hughes. Zuckerberg took 
+                 the company public in May 2012 with majority shares.
+                  In 2008, at age 23, he became the world's youngest self-made billionaire.
+                 He has since used his funds to organize multiple donations,
+                  including the establishment of the Chan Zuckerberg Initiative.
+            </p>
+    
+          
+        </div>
+    
+        <div class="review-carditeam">
+            <div class="card-img">
+                  <img src="Sam_Altman_CropEdit_James_Tamim.jpg" alt="">
+                  <p>Samuel Harris Altman </p>
+            </div>
+            <p>
+                Samuel Harris Altman (born April 22, 1985) is an American entrepreneur and 
+                investor best known as the CEO of OpenAI since 2019 (he was briefly fired and reinstated in November 2023)
+                .[1] He is also the chairman of clean energy companies Oklo Inc. and Helion Energy.
+                [2] Altman is considered to be one of the leading figures of the AI boom.[3][4][5]
+                 He dropped out of Stanford University after two years and founded Loopt,
+                  a mobile social networking service, raising more than $30 million in venture capital.
+                In 2011, Altman joined Y Combinator, a startup accelerator, and was its president from 2014 to 2019.[6]
+            </p>
+    
+          
+        </div>
+    </div>
+    <div class="join-section">
+        <div class="join-head-dis">
+          <div class="join-head">
+            <h2><b>Join in and get 15% off!</b></h2>
+          </div>
+          <div class="join-dis">
+            <p>
+              Join our membership and get 15% off inrichest coffee in the city.
+            </p>
+          </div>
+        </div>
+        <div class="join-btn">
+          <div class="join-btn1">Touch IN</div>
+          <div class="join-btn2">subscribe</div>
+        </div>
+      </div>
+      <div class="end-section">
+        <div class="end-coffee">
+          <h4>COFFEE</h4>
+        </div>
+        <div class="privacy">
+          <p><b>PRIVACY</b></p>
+          <p>Terms& CON.</p>
+          <p>Privacy policy</p>
+          <p>Conti</p>
+        </div>
+        <div class="services">
+          <p><b>SERVICES</b></p>
+          <p>Product</p>
+          <p>Deliver</p>
+          <p>Take</p>
+        </div>
+        <div class="aboutus">
+          <p><b>ABOUT US</b></p>
+          <p>Owner</p>
+          <p>Place</p>
+          <p>City</p>
+        </div>
+        <div class="information">
+          <p><b>INFORMATION</b></p>
+          <p>Our product</p>
+          <p>Company</p>
+          <p>Support</p>
+        </div>
+        <div class="social">
+          <p><b>SOCIAL MEDIA</b></p>
+          <div class="social-img">
+            <img
+              src="twitter-logo-twitter-icon-transparent-free-free-png.webp"
+              alt=""
+            />
+            <img src="facebook-logo-with-transparent-background-21.png" alt="" />
+            <img
+              src="instagram-logo-instagram-icon-transparent-free-png.webp"
+              alt=""
+            />
+            <img
+              src="linkedin-logo-linkedin-icon-transparent-free-png.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
